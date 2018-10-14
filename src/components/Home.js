@@ -14,7 +14,8 @@ class Home extends React.Component {
         const containerStyle = {
             flex: 1,
             justifyContent: 'center',
-            alignItems: 'center'
+            alignItems: 'center',
+            zIndex: -1
         };
 
         return (

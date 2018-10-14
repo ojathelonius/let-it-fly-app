@@ -4,6 +4,7 @@ import { Asset, AppLoading, SplashScreen, Constants } from 'expo';
 import { Dimensions, Platform } from "react-native";
 import CustomHeader from './CustomHeader';
 import Home from './Home';
+import CustomFooter from './CustomFooter';
 
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
@@ -31,6 +32,7 @@ class App extends React.Component {
             <Container style={containerStyle}>
                 <CustomHeader />
                 <Home />
+                <CustomFooter />
             </Container>
         );
     }

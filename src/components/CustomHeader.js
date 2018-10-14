@@ -9,9 +9,7 @@ class CustomHeader extends React.Component {
             display: 'flex',
             backgroundColor: 'white',
             justifyContent: 'space-between',
-            padding: 0,
-            margin: 0,
-            elevation: 3
+            elevation: 1
         }
 
         const titleStyle = {
