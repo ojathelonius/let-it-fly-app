@@ -6,7 +6,7 @@ import Home from './Home';
 import Search from './Search';
 import Flights from './Flights';
 import Trips from './Trips';
-import More from './More';
+import MoreNavigator from './MoreNavigator';
 
 export default createBottomTabNavigator(
     {
@@ -14,7 +14,7 @@ export default createBottomTabNavigator(
         Search: Search,
         Flights: Search,
         Trips: Trips,
-        More: More
+        More: MoreNavigator
     },
     {
         navigationOptions: ({ navigation }) => ({

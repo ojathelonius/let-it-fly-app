@@ -57,7 +57,7 @@ class More extends React.Component {
 
                                 <Text style={textColor}>Check-in</Text>
                             </ListItem>
-                            <ListItem icon style={listItemStyle}>
+                            <ListItem icon style={listItemStyle} onPress={() => this.props.navigation.navigate('LetItFly')}>
                                 <Image
                                     style={imgStyle}
                                     resizeMode={'contain'}
