@@ -1,7 +1,7 @@
 import React from 'react';
 import { ImageBackground, View, Content } from 'react-native';
 
-class Home extends React.Component {
+class Trips extends React.Component {
 
     render() {
         const backgroundStyle = {
@@ -25,4 +25,4 @@ class Home extends React.Component {
     }
 }
 
-export default Home;
+export default Trips;

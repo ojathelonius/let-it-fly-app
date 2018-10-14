@@ -2,6 +2,11 @@ import React from 'react';
 import { Footer, FooterTab, Button, Icon } from 'native-base';
 import { Image } from 'react-native';
 
+
+/**
+ * TODO : remove if unused
+ */
+
 class CustomFooter extends React.Component {
 
     render() {

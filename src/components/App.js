@@ -4,7 +4,8 @@ import { Asset, AppLoading, SplashScreen, Constants } from 'expo';
 import { Dimensions, Platform } from "react-native";
 import CustomHeader from './CustomHeader';
 import Home from './Home';
-import CustomFooter from './CustomFooter';
+import BottomTabBarNavigator from './BottomTabBarNavigator';
+import { createBottomTabNavigator  } from 'react-navigation';
 
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
@@ -14,6 +15,8 @@ class App extends React.Component {
     async componentWillMount() {
         this.props.loadResources();
     }
+
+
 
     render() {
 
@@ -31,8 +34,7 @@ class App extends React.Component {
         return (
             <Container style={containerStyle}>
                 <CustomHeader />
-                <Home />
-                <CustomFooter />
+                <BottomTabBarNavigator />
             </Container>
         );
     }
