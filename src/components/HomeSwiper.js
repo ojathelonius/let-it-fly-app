@@ -7,7 +7,7 @@ class HomeSwiper extends React.Component {
     render() {
 
         const swiperStyle = {
-            height: 280
+            height: 250
         }
 
         const text = {
@@ -66,7 +66,7 @@ class HomeSwiper extends React.Component {
         }
         return (
             <View style={swiperStyle}>
-                <Swiper dotColor='#BDBBBC' activeDotColor='#656567'>
+                <Swiper dotColor='#BDBBBC' activeDotColor='#656567' loop={false}>
                     <ImageBackground
                         source={require("../../assets/images/sydney.jpg")}
                         style={imgSlideStyle}

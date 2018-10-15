@@ -41,7 +41,7 @@ class CustomHeader extends React.Component {
                     <Image
                         style={imgStyle}
                         resizeMode={'contain'}
-                        source={require('../../assets/icons/ic_ab_profile_grey.png')}
+                        source={require('../../assets/icons/ic_ab_profile.png')}
                     />
                 </Right>
             </Header>

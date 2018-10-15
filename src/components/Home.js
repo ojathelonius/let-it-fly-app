@@ -2,6 +2,7 @@ import React from 'react';
 import { ImageBackground, View, Content, Text, Container } from 'react-native';
 import HomeHeader from './HomeHeader';
 import HomeSwiper from './HomeSwiper';
+import HomeFlightSelection from './HomeFlightSelection';
 
 class Home extends React.Component {
 
@@ -22,6 +23,7 @@ class Home extends React.Component {
                     style={backgroundStyle}>
                     <HomeHeader />
                     <HomeSwiper />
+                    <HomeFlightSelection />
                 </ImageBackground>
             </View >
         );
