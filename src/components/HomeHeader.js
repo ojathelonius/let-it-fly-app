@@ -28,7 +28,7 @@ class Home extends React.Component {
         }
 
         const textStyle = {
-            ontFamily: 'Roboto',
+            fontFamily: 'Roboto',
             fontSize: 14,
             color: 'white'
         }
