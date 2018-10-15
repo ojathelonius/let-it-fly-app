@@ -1,5 +1,7 @@
 import React from 'react';
-import { ImageBackground, View, Content } from 'react-native';
+import { ImageBackground, View, Content, Text, Container } from 'react-native';
+import HomeHeader from './HomeHeader';
+import HomeSwiper from './HomeSwiper';
 
 class Home extends React.Component {
 
@@ -13,14 +15,15 @@ class Home extends React.Component {
             flex: 1,
             elevation: 0
         };
-
         return (
             <View style={containerStyle}>
                 <ImageBackground
                     source={require("../../assets/background.jpg")}
                     style={backgroundStyle}>
+                    <HomeHeader />
+                    <HomeSwiper />
                 </ImageBackground>
-            </View>
+            </View >
         );
     }
 }
