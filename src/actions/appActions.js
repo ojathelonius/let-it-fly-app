@@ -15,11 +15,12 @@ export const loadResources = () => (async (dispatch) => {
     await Expo.Font.loadAsync({
         Roboto: require("native-base/Fonts/Roboto.ttf"),
         Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf"),
-        Arial: require("../../assets/fonts/Arial.ttf")
+        Arial: require("../../assets/fonts/Arial.ttf"),
+        NoTime: require("../../assets/fonts/NoTime.ttf")
     });
 
     Expo.SplashScreen.hide();
-    
+
     dispatch(resourcesLoaded());
 
 })

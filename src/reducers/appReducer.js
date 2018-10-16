@@ -1,5 +1,6 @@
 const initialState = {
-    isReady: false
+    isReady: false,
+    showHeader: true
 }
 
 const appReducer = (state = initialState, action) => {
@@ -9,7 +10,7 @@ const appReducer = (state = initialState, action) => {
                 ...state,
                 isReady: true
             }
-        default: 
+        default:
             return state
     }
 }

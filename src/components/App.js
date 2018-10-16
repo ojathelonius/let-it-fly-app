@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Header, Left, Body, Right, Button, Icon, Title } from 'native-base';
 import { Asset, AppLoading, SplashScreen, Constants } from 'expo';
 import { Dimensions, Platform } from "react-native";
-import CustomHeader from './CustomHeader';
+import CustomHeaderContainer from '../containers/CustomHeaderContainer';
 import Home from './Home';
 import BottomTabBarNavigator from './BottomTabBarNavigator';
 import { createBottomTabNavigator  } from 'react-navigation';
@@ -33,8 +33,8 @@ class App extends React.Component {
 
         return (
             <Container style={containerStyle}>
-                <CustomHeader />
-                <BottomTabBarNavigator />
+                <CustomHeaderContainer />
+                <BottomTabBarNavigator/>
             </Container>
         );
     }

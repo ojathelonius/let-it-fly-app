@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, Left, Body, Right, Icon, Title } from 'native-base';
+import { Header, Left, Body, Right, Icon } from 'native-base';
 import { Image, View, Container } from 'react-native';
 
 class CustomHeader extends React.Component {
@@ -14,10 +14,6 @@ class CustomHeader extends React.Component {
             borderBottomColor: '#BDBDBD'
         }
 
-        const titleStyle = {
-            color: 'black'
-        }
-
         const logoStyle = {
             height: 30,
             width: 100
@@ -28,6 +24,9 @@ class CustomHeader extends React.Component {
             width: 70
         }
 
+        if (!this.props.showHeader) {
+            return null;
+        }
         return (
             <Header style={headerStyle}>
                 <Left>
