@@ -24,3 +24,10 @@ export const loadResources = () => (async (dispatch) => {
     dispatch(resourcesLoaded());
 
 })
+
+export const notifyOverbooking = () => {
+
+    return {
+        type: 'NOTIFY_OVERBOOKING'
+    }
+}

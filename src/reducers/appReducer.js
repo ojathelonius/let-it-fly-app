@@ -1,6 +1,7 @@
 const initialState = {
     isReady: false,
-    showHeader: true
+    showHeader: true,
+    isOverbooked: false
 }
 
 const appReducer = (state = initialState, action) => {
@@ -9,6 +10,11 @@ const appReducer = (state = initialState, action) => {
             return {
                 ...state,
                 isReady: true
+            }
+        case 'NOTIFY_OVERBOOKING':
+            return {
+                ...state,
+                isOverbooked: true
             }
         default:
             return state

@@ -3,6 +3,7 @@ import { ImageBackground, View, Content, Text, Container } from 'react-native';
 import HomeHeader from './HomeHeader';
 import HomeSwiper from './HomeSwiper';
 import HomeFlightSelection from './HomeFlightSelection';
+import Egg from 'react-native-egg';
 
 class Home extends React.Component {
 
@@ -16,6 +17,12 @@ class Home extends React.Component {
             flex: 1,
             elevation: 0
         };
+
+        const hiddenEventStyle = {
+            height: 100
+        }
+        
+
         return (
             <View style={containerStyle}>
                 <ImageBackground
@@ -24,6 +31,11 @@ class Home extends React.Component {
                     <HomeHeader />
                     <HomeSwiper />
                     <HomeFlightSelection />
+                    <Egg style={hiddenEventStyle}
+                        setps={'TT'}
+                        onCatch={() => this.props.notifyOverbooking()}
+                    >
+                    </Egg>
                 </ImageBackground>
             </View >
         );

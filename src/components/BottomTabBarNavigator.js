@@ -2,7 +2,7 @@ import React from 'react';
 import { createBottomTabNavigator } from 'react-navigation';
 import { Image, Text, View } from 'react-native';
 
-import Home from './Home';
+import HomeContainer from '../containers/HomeContainer';
 import Search from './Search';
 import Flights from './Flights';
 import Trips from './Trips';
@@ -10,7 +10,7 @@ import MoreNavigator from './MoreNavigator';
 
 export default createBottomTabNavigator(
     {
-        Home: Home,
+        Home: HomeContainer,
         Search: Search,
         Flights: Search,
         Trips: Trips,
