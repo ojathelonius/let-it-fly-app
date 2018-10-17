@@ -7,7 +7,7 @@ import More from './More';
 const MoreNavigator = createStackNavigator(
     {
         More: More,
-        LetItFly: LetItFlyNavigator
+        LetItFly: LetItFlyNavigator,
     },
     {
         initialRouteName: 'More',
