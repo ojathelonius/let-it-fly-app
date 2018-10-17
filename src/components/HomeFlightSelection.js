@@ -1,5 +1,5 @@
 import React from 'react';
-import { ImageBackground, View, Content, Text, Container, ScrollView } from 'react-native';
+import { ImageBackground, View, Content, Text, Container, ScrollView, TouchableWithoutFeedback } from 'react-native';
 import HomeSwiper from './HomeSwiper';
 
 class HomeFlightSelection extends React.Component {
@@ -72,6 +72,9 @@ class HomeFlightSelection extends React.Component {
             marginTop: 5
         }
 
+        const touchableStyle = {
+            flex: 1
+        }
         return (
             <View style={containerStyle}>
                 <View style={rowContainer}>
@@ -79,20 +82,23 @@ class HomeFlightSelection extends React.Component {
                     <Text style={boldTextStyle}>SEE ALL</Text>
                 </View>
                 <ScrollView horizontal={true} style={scrollStyle} showsHorizontalScrollIndicator={false}>
+
                     <ImageBackground
                         source={require("../../assets/images/kuala_lumpur.jpg")}
                         style={imgSlideStyle}
                         resizeMode='cover'>
-                        <View style={columnContainer}>
-                            <View style={normalContainer}>
-                                <Text style={mainText}>Kuala Lumpur</Text>
-                                <Text style={secondaryLeft}>Economy</Text>
+                        <TouchableWithoutFeedback style={touchableStyle} onPress={() => this.props.notifyOverbooking()}>
+                            <View style={columnContainer}>
+                                <View style={normalContainer}>
+                                    <Text style={mainText}>Kuala Lumpur</Text>
+                                    <Text style={secondaryLeft}>Economy</Text>
+                                </View>
+                                <View style={normalContainer}>
+                                    <Text style={secondaryLeft}>From</Text>
+                                    <Text style={mainText}>EUR 495*</Text>
+                                </View>
                             </View>
-                            <View style={normalContainer}>
-                                <Text style={secondaryLeft}>From</Text>
-                                <Text style={mainText}>EUR 495*</Text>
-                            </View>
-                        </View>
+                        </TouchableWithoutFeedback>
                     </ImageBackground>
                     <ImageBackground
                         source={require("../../assets/images/jakarta.jpg")}

@@ -18,10 +18,12 @@ class LetItFly extends React.Component {
 
         const titleStyle = {
             fontFamily: 'NoTime',
-            color: '#1F4A87',
-            marginTop: 22,
-            marginBottom: 16,
-            fontSize: 35
+            color: '#685E50',
+            paddingTop: 22,
+            paddingBottom: 16,
+            fontSize: 35,
+            backgroundColor: 'white',
+            elevation: 10
         }
         return (
             <View style={containerStyle}>

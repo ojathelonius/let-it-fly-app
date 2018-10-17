@@ -1,9 +1,9 @@
 import React from 'react';
 import { ImageBackground, View, Content, Text, Container } from 'react-native';
+import { Icon } from 'native-base';
 import HomeHeader from './HomeHeader';
 import HomeSwiper from './HomeSwiper';
 import HomeFlightSelection from './HomeFlightSelection';
-import Egg from 'react-native-egg';
 
 class Home extends React.Component {
 
@@ -19,23 +19,38 @@ class Home extends React.Component {
         };
 
         const hiddenEventStyle = {
-            height: 100
+            flex: 1
         }
-        
+
+        const warningStyle = {
+            backgroundColor: 'orange',
+            fontSize: 15,
+            padding: 8,
+            color: 'white',
+            textAlign: 'center'
+        }
+
+        const touchableStyle = {
+            flex: 1
+        }
+
+        const iconStyle = {
+            color: 'white',
+            fontSize: 15
+        }
 
         return (
             <View style={containerStyle}>
+                {this.props.isOverbooked ? (
+                    <Text style={warningStyle}><Icon type="FontAwesome" name="exclamation-triangle" style={iconStyle} />Your flight might be overbooked. See what your options are with Let it fly !</Text>) : null}
                 <ImageBackground
                     source={require("../../assets/background.jpg")}
                     style={backgroundStyle}>
                     <HomeHeader />
                     <HomeSwiper />
-                    <HomeFlightSelection />
-                    <Egg style={hiddenEventStyle}
-                        setps={'TT'}
-                        onCatch={() => this.props.notifyOverbooking()}
-                    >
-                    </Egg>
+                    <View style={touchableStyle}>
+                        <HomeFlightSelection notifyOverbooking={this.props.notifyOverbooking} />
+                    </View>
                 </ImageBackground>
             </View >
         );

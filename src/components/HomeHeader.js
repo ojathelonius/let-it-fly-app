@@ -11,8 +11,7 @@ class Home extends React.Component {
             justifyContent: 'center',
             height: 55,
             backgroundColor: '#041E41',
-            padding: 8,
-            elevation: 10
+            padding: 8
         }
 
         const columnContainer = {
