@@ -2,7 +2,7 @@ import React from 'react';
 import { Header, Left, Body, Right, Title } from 'native-base';
 import { Image, View, Container } from 'react-native';
 
-class CustomHeader extends React.Component {
+class CustomLetItFlyHeader extends React.Component {
 
     render() {
         const headerStyle = {
@@ -11,7 +11,8 @@ class CustomHeader extends React.Component {
             borderBottomColor: '#BDBDBD',
             display: 'flex',
             justifyContent: 'space-between',
-            alignItems: 'center'
+            alignItems: 'center',
+            paddingLeft: 15
         }
 
         const logoStyle = {
@@ -24,21 +25,28 @@ class CustomHeader extends React.Component {
             width: 70
         }
 
+        const letItFlyStyle = {
+            fontFamily: 'NoTime',
+            color: '#685E50',
+            paddingTop: 22,
+            paddingBottom: 16,
+            fontSize: 20,
+            backgroundColor: 'white'
+        }
+
         const titleStyle = {
             fontFamily: 'Roboto',
             color: '#878787',
             fontSize: 18
         }
 
+
+
         return (
 
             <Header style={headerStyle}>
                 <View>
-                    <Image
-                        style={logoStyle}
-                        resizeMode={'contain'}
-                        source={require('../../assets/icons/ic_ab_sia_logo.png')}
-                    />
+                <Title style={letItFlyStyle}>LET IT FLY</Title>
                 </View>
                 <View><Title style={titleStyle}>{this.props.title ? this.props.title : ''}</Title></View>
                 <View>
@@ -53,4 +61,4 @@ class CustomHeader extends React.Component {
     }
 }
 
-export default CustomHeader;
+export default CustomLetItFlyHeader;

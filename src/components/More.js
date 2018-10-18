@@ -63,7 +63,7 @@ class More extends React.Component {
                                     resizeMode={'contain'}
                                     source={require('../../assets/icons/ic_letitfly.png')}
                                 />
-                                <Text style={textColor}>Let it fly !</Text>
+                                <Text style={textColor}>Let it fly!</Text>
                             </ListItem>
                             <ListItem icon style={listItemStyle}>
                                 <Image

@@ -7,13 +7,17 @@ import CustomHeader from '../components/CustomHeader';
 const MoreNavigator = createStackNavigator(
     {
         More: More,
-        LetItFly: LetItFlyNavigator,
+        LetItFly: {
+            screen: LetItFlyNavigator
+        }
     },
     {
         initialRouteName: 'More',
-        navigationOptions: ({ navigation }) => ({
-            header: (props) => (<CustomHeader {...props} title='Overbooking'/>)
-          }),
+        navigationOptions: ({ navigation }) => {
+            return ({
+                header: (props) => (navigation.state.index == undefined ? <CustomHeader {...props} title='More' /> : null)
+            })
+        },
     }
 );
 

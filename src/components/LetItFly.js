@@ -27,11 +27,10 @@ class LetItFly extends React.Component {
         }
 
         const listStyle = {
-            marginTop: 10,
+            marginTop: 15,
             backgroundColor: 'white',
-            elevation: 10,
-            borderBottomWidth: 1,
-            borderBottomColor: '#BCBCBC'
+            borderTopWidth: 1,
+            borderTopColor: '#BCBCBC'
         }
 
         const listItemStyle = {
@@ -100,7 +99,7 @@ class LetItFly extends React.Component {
                         </List>
                     </Content>
                     <View style={descriptionStyle}>
-                        <Text style={largeTextDescriptionStyle}>It's all on us !</Text>
+                        <Text style={largeTextDescriptionStyle}>It's all on us!</Text>
                     </View>
                 </ImageBackground>
 
