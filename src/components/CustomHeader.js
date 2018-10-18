@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, Left, Body, Right, Icon } from 'native-base';
+import { Header, Left, Body, Right, Title } from 'native-base';
 import { Image, View, Container } from 'react-native';
 
 class TestHeader extends React.Component {
@@ -25,6 +25,7 @@ class TestHeader extends React.Component {
         }
 
         return (
+
             <Header style={headerStyle}>
                 <Left>
                     <Image
@@ -33,6 +34,7 @@ class TestHeader extends React.Component {
                         source={require('../../assets/icons/ic_ab_sia_logo.png')}
                     />
                 </Left>
+                <Body><Title>{this.props.title ? this.props.title : ''}</Title></Body>
                 <Right>
                     <Image
                         style={imgStyle}

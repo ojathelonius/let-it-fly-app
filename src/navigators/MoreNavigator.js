@@ -12,7 +12,7 @@ const MoreNavigator = createStackNavigator(
     {
         initialRouteName: 'More',
         navigationOptions: ({ navigation }) => ({
-            header: (props) => (<CustomHeader {...props}/>)
+            header: (props) => (<CustomHeader {...props} title='Overbooking'/>)
           }),
     }
 );

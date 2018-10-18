@@ -9,7 +9,7 @@ const SearchNavigator = createStackNavigator(
     },
     {
         navigationOptions: ({ navigation }) => ({
-            header: (props) => (<CustomHeader {...props}/>)
+            header: (props) => (<CustomHeader {...props} title='Search'/>)
           }),
     }
 );
