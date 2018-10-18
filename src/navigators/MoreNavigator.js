@@ -1,8 +1,8 @@
 import React from 'react';
 import { createStackNavigator } from 'react-navigation';
-
 import LetItFlyNavigator from './LetItFlyNavigator';
 import More from '../components/More';
+import CustomHeader from '../components/CustomHeader';
 
 const MoreNavigator = createStackNavigator(
     {
@@ -10,7 +10,10 @@ const MoreNavigator = createStackNavigator(
         LetItFly: LetItFlyNavigator,
     },
     {
-        initialRouteName: 'More'
+        initialRouteName: 'More',
+        navigationOptions: ({ navigation }) => ({
+            header: (props) => (<CustomHeader {...props}/>)
+          }),
     }
 );
 
