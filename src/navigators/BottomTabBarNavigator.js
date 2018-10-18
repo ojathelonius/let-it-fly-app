@@ -2,18 +2,18 @@ import React from 'react';
 import { createBottomTabNavigator } from 'react-navigation';
 import { Image, Text, View } from 'react-native';
 
-import HomeContainer from '../containers/HomeContainer';
-import Search from './Search';
-import Flights from './Flights';
-import Trips from './Trips';
+import HomeNavigator from './HomeNavigator';
+import SearchNavigator from './SearchNavigator';
+import FlightsNavigator from './FlightsNavigator';
+import TripsNavigator from './TripsNavigator';
 import MoreNavigator from './MoreNavigator';
 
 export default createBottomTabNavigator(
     {
-        Home: HomeContainer,
-        Search: Search,
-        Flights: Search,
-        Trips: Trips,
+        Home: HomeNavigator,
+        Search: SearchNavigator,
+        Flights: FlightsNavigator,
+        Trips: TripsNavigator,
         More: MoreNavigator
     },
     {

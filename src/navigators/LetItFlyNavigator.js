@@ -2,9 +2,9 @@ import React from 'react';
 import { createBottomTabNavigator } from 'react-navigation';
 import { Image, Text, View } from 'react-native';
 import LetItFlyContainer from '../containers/LetItFlyContainer';
-import Activities from './Activities';
-import AlternativeFlights from './AlternativeFlights';
-import Hotels from './Hotels';
+import Activities from '../components/Activities';
+import AlternativeFlights from '../components/AlternativeFlights';
+import Hotels from '../components/Hotels';
 
 const LetItFlyNavigator = createBottomTabNavigator(
     {

@@ -2,7 +2,7 @@ import React from 'react';
 import { createStackNavigator } from 'react-navigation';
 
 import LetItFlyNavigator from './LetItFlyNavigator';
-import More from './More';
+import More from '../components/More';
 
 const MoreNavigator = createStackNavigator(
     {
@@ -10,8 +10,7 @@ const MoreNavigator = createStackNavigator(
         LetItFly: LetItFlyNavigator,
     },
     {
-        initialRouteName: 'More',
-        headerMode: 'none'
+        initialRouteName: 'More'
     }
 );
 
@@ -26,5 +25,4 @@ MoreNavigator.navigationOptions = ({ navigation }) => {
         tabBarVisible,
     };
 };
-
 export default MoreNavigator;

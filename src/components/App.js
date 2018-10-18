@@ -4,7 +4,7 @@ import { Asset, AppLoading, SplashScreen, Constants } from 'expo';
 import { Dimensions, Platform } from "react-native";
 import CustomHeaderContainer from '../containers/CustomHeaderContainer';
 import Home from './Home';
-import BottomTabBarNavigator from './BottomTabBarNavigator';
+import BottomTabBarNavigator from '../navigators//BottomTabBarNavigator';
 import { createBottomTabNavigator  } from 'react-navigation';
 
 const deviceHeight = Dimensions.get("window").height;
@@ -33,7 +33,6 @@ class App extends React.Component {
 
         return (
             <Container style={containerStyle}>
-                <CustomHeaderContainer />
                 <BottomTabBarNavigator/>
             </Container>
         );
