@@ -1,7 +1,7 @@
 import React from 'react';
 import { ImageBackground, View, Content, ScrollView } from 'react-native';
 import FlightCard from './FlightCard';
-const flights = require('../../data/flights.json');
+import flights from '../../data/flights';
 
 class AlternativeFlights extends React.Component {
 

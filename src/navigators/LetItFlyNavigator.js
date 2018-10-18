@@ -11,8 +11,8 @@ const LetItFlyNavigator = createBottomTabNavigator(
     {
         LetItFly: LetItFlyContainer,
         AlternativeFlights: AlternativeFlightsNavigator,
-        Hotels: HotelsNavigator,
         Activities: ActivitiesNavigator,
+        Hotels: HotelsNavigator
     },
     {
         navigationOptions: ({ navigation }) => ({

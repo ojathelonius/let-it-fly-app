@@ -1,5 +1,9 @@
 import React from 'react';
-import { ImageBackground, View, Content } from 'react-native';
+import { ImageBackground, View, Content, ScrollView, Text } from 'react-native';
+import ActivitiesSelection from './ActivitiesSelection';
+import ActivitySwiper from './ActivitySwiper';
+
+import activityTypes from '../../data/activityTypes';
 
 class Activities extends React.Component {
 
@@ -14,11 +18,23 @@ class Activities extends React.Component {
             elevation: 0
         };
 
+        const recommandationTextStyle = {
+            fontFamily: 'Roboto',
+            fontSize: 20,
+            color: '#908B6E',
+            padding: 10
+        }
+
         return (
             <View style={containerStyle}>
                 <ImageBackground
                     source={require("../../assets/background.jpg")}
                     style={backgroundStyle}>
+                    <ScrollView>
+                        <Text style={recommandationTextStyle}>Recommended for you</Text>
+                        <ActivitySwiper />
+                        {activityTypes.map(activityType => (<ActivitiesSelection activityType={activityType} key={activityType.id} />))}
+                    </ScrollView>
                 </ImageBackground>
             </View>
         );
