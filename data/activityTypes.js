@@ -24,7 +24,7 @@ const activityTypes = [
         ]
     },
     {
-        id: 0,
+        id: 1,
         title: 'Events',
         activities: [
             {
@@ -44,6 +44,30 @@ const activityTypes = [
                 image: require('../assets/images/jasonmraz.jpg'),
                 title: 'Jason Mraz',
                 description: 'Never without his guitar'
+            }
+        ]
+    },
+    {
+        id: 2,
+        title: 'Dining',
+        activities: [
+            {
+                id: 0,
+                image: require('../assets/images/epicure.jpg'),
+                title: 'Epicure',
+                description: 'Finest french food'
+            },
+            {
+                id: 1,
+                image: require('../assets/images/sushi.jpg'),
+                title: 'Blueberry',
+                description: 'Fresh sushi all day'
+            },
+            {
+                id: 2,
+                image: require('../assets/images/mediterranean.jpg'),
+                title: 'Le Vieux Port',
+                description: 'Seafood and more'
             }
         ]
     }

@@ -120,18 +120,18 @@ class ActivitySwiper extends React.Component {
                         </View>
                     </ImageBackground>
                     <ImageBackground
-                        source={require("../../assets/images/art_festival.jpg")}
+                        source={require("../../assets/images/sushi.jpg")}
                         style={imgSlideStyle}
                         resizeMode='cover'>
                         <View style={columnContainer}>
                             <View style={rowContainer}>
                                 <View>
-                                    <Icon type="FontAwesome" name="home" /><Text style={mainLeftText}>26th Paris Art Festival</Text>
-                                    <Text style={secondaryLeftText}>Event</Text>
+                                    <Icon type="FontAwesome" name="home" /><Text style={mainLeftText}>Blueberry Maki Bar</Text>
+                                    <Text style={secondaryLeftText}>Dining</Text>
                                 </View>
                                 <View style={rightContainer}>
                                     <View style={lineContainer}>
-                                        <Icon type="FontAwesome" name="location-arrow" style={iconStyle} /><Text style={secondaryRightText}>Montmartre</Text>
+                                        <Icon type="FontAwesome" name="location-arrow" style={iconStyle} /><Text style={secondaryRightText}>Paris VIe</Text>
                                     </View>
                                 </View>
                             </View>
