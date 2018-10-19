@@ -95,12 +95,13 @@ class HotelCard extends React.Component {
         }
 
         const rowContainer = {
-            flexDirection: 'row'
+            flexDirection: 'row',
+            alignItems: 'center'
         }
 
         const locationIconStyle = {
             fontSize: 15,
-            color: '#998B6E',
+            color: '#5E5E5E',
             marginRight: 10
         }
 
