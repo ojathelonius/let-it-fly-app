@@ -125,7 +125,7 @@ class More extends React.Component {
                                 <Image
                                     style={imgStyle}
                                     resizeMode={'contain'}
-                                    source={require('../../assets/icons/ic_nav_more.png')}
+                                    source={require('../../assets/icons/ic_nav_terms.png')}
                                 />
                                 <Text style={textColor}>Terms and conditions</Text>
                             </ListItem>

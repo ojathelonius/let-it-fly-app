@@ -7,7 +7,7 @@ const activityTypes = [
                 id: 0,
                 image: require('../assets/images/acrobranche.jpg'),
                 title: 'Treetop Adventure',
-                description: 'Craving for adrenaline ?'
+                description: 'Craving for adrenaline?'
             },
             {
                 id: 1,
