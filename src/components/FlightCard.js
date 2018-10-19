@@ -1,5 +1,5 @@
 import React from 'react';
-import { ImageBackground, View, Content, Text, Image, Button, TouchableWithoutFeedback } from 'react-native';
+import { ImageBackground, View, Content, Text, Image } from 'react-native';
 
 class FlightCard extends React.Component {
 
@@ -56,7 +56,8 @@ class FlightCard extends React.Component {
             marginTop: 20,
             borderBottomWidth: 1,
             borderBottomColor: '#BDBDBD',
-            marginBottom: 20
+            marginBottom: 20,
+            flexDirection: 'row'
         }
 
         const lineStyle = {
@@ -75,54 +76,58 @@ class FlightCard extends React.Component {
             width: 200
         }
 
+        const separatorStyle = {
+            backgroundColor: '#998B6E',
+            width: 20
+        }
+
+        const mainInfoStyle = {
+            flex: 1
+        }
+
         const flight = this.props.flight;
 
         return (
             <View style={cardStyle}>
-                <View style={infoStyle}>
-                    <View style={rowSpacedStyle}>
-                        <Text style={smallTextStyle}>{flight.flightNumber}</Text>
-                        <Text style={smallTextStyle}>{flight.plane}</Text>
+                {
+                    (flight.id == 1 && this.props.hasLayover) ?
+                        (<View style={separatorStyle}></View>) : null
+                }
+                <View style={mainInfoStyle}>
+                    <View style={infoStyle}>
+                        <View style={rowSpacedStyle}>
+                            <Text style={smallTextStyle}>{flight.flightNumber}</Text>
+                            <Text style={smallTextStyle}>{flight.plane}</Text>
+                        </View>
+                    </View>
+                    <View style={infoStyle}>
+                        <View style={rowSpacedStyle}>
+                            <View style={colStyle}>
+                                <Text style={largeTextStyle}>{flight.originCity}</Text>
+                                <Text style={smallTextStyle}>{flight.originAirport}</Text>
+                                <Text style={smallTextStyle}>{flight.originTerminal}</Text>
+                            </View>
+                            <View style={colStyle}>
+                                <Text style={largeTextStyle}>{flight.destinationCity}</Text>
+                                <Text style={smallTextStyle}>{flight.destinationAirport}</Text>
+                            </View>
+                        </View>
+                    </View>
+                    <View style={infoStyle}>
+                        <View style={lineStyle}>
+                            <Text style={smallBoldTextStyle}>{flight.departure}</Text>
+                            <Text style={smallBoldTextStyle}>{flight.arrival}</Text>
+                        </View>
+                        <View style={lineStyle}>
+                            <Text style={largeGoldenTextStyle}>{flight.departureTime}</Text>
+                            <Text style={largeGoldenTextStyle}>{flight.arrivalTime}</Text>
+                        </View>
                     </View>
                 </View>
-                <View style={infoStyle}>
-                    <View style={rowSpacedStyle}>
-                        <View style={colStyle}>
-                            <Text style={largeTextStyle}>{flight.originCity}</Text>
-                            <Text style={smallTextStyle}>{flight.originAirport}</Text>
-                            <Text style={smallTextStyle}>{flight.originTerminal}</Text>
-                        </View>
-                        <View style={colStyle}>
-                            <Text style={largeTextStyle}>{flight.destinationCity}</Text>
-                            <Text style={smallTextStyle}>{flight.destinationAirport}</Text>
-                        </View>
-                    </View>
-                </View>
-                <View style={infoStyle}>
-                    <View style={lineStyle}>
-                        <Text style={smallBoldTextStyle}>{flight.departure}</Text>
-                        <Text style={smallBoldTextStyle}>{flight.arrival}</Text>
-                    </View>
-                    <View style={centeredLineStyle}>
-                        <Text style={smallGoldenTextStyle}>Scheduled</Text>
-                    </View>
-                    <View style={lineStyle}>
-                        <Text style={largeGoldenTextStyle}>{flight.departureTime}</Text>
-                        <View>
-                            <Image
-                                style={imgStyle}
-                                resizeMode={'contain'}
-                                source={require('../../assets/icons/plane_en_route.png')}
-                            />
-                        </View>
-                        <Text style={largeGoldenTextStyle}>{flight.arrivalTime}</Text>
-                    </View>
-                    <TouchableWithoutFeedback onPress={() => alert('Flight booked successfully.')}>
-                        <View style={centeredLineStyle}>
-                            <Text style={smallGoldenTextStyle}>Book it</Text>
-                        </View>
-                    </TouchableWithoutFeedback>
-                </View>
+                {
+                    (flight.id == 0 && this.props.hasLayover) ?
+                        (<View style={separatorStyle}></View>) : null
+                }
             </View>
         );
     }
