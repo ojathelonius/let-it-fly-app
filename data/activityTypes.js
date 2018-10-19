@@ -70,6 +70,30 @@ const activityTypes = [
                 description: 'Seafood and more'
             }
         ]
+    },
+    {
+        id: 3,
+        title: 'Airport services',
+        activities: [
+            {
+                id: 0,
+                image: require('../assets/images/lounge.jpg'),
+                title: 'Lounge',
+                description: 'Enter the VIP area'
+            },
+            {
+                id: 1,
+                image: require('../assets/images/sleepingpods.jpg'),
+                title: 'Take a nap',
+                description: 'Relax before your flight'
+            },
+            {
+                id: 2,
+                image: require('../assets/images/massage.jpg'),
+                title: 'Massage',
+                description: 'Reset your mood'
+            }
+        ]
     }
 ]
 

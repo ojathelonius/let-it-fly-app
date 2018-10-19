@@ -90,7 +90,7 @@ class ActivitySwiper extends React.Component {
                         <View style={columnContainer}>
                             <View style={rowContainer}>
                                 <View>
-                                    <Icon type="FontAwesome" name="home" /><Text style={mainLeftText}>Domaine de Chantilly</Text>
+                                    <Text style={mainLeftText}>Domaine de Chantilly</Text>
                                     <Text style={secondaryLeftText}>Outdoors</Text>
                                 </View>
                                 <View style={rightContainer}>
@@ -100,7 +100,7 @@ class ActivitySwiper extends React.Component {
                                 </View>
                             </View>
                         </View>
-                    </ImageBackground>
+                    </ImageBackground> 
                     <ImageBackground
                         source={require("../../assets/images/jasonmraz.jpg")}
                         style={imgSlideStyle}
@@ -108,7 +108,7 @@ class ActivitySwiper extends React.Component {
                         <View style={columnContainer}>
                             <View style={rowContainer}>
                                 <View>
-                                    <Icon type="FontAwesome" name="home" /><Text style={mainLeftText}>Jason Mraz</Text>
+                                    <Text style={mainLeftText}>Jason Mraz</Text>
                                     <Text style={secondaryLeftText}>Concert</Text>
                                 </View>
                                 <View style={rightContainer}>
@@ -126,7 +126,7 @@ class ActivitySwiper extends React.Component {
                         <View style={columnContainer}>
                             <View style={rowContainer}>
                                 <View>
-                                    <Icon type="FontAwesome" name="home" /><Text style={mainLeftText}>Blueberry Maki Bar</Text>
+                                    <Text style={mainLeftText}>Blueberry Maki Bar</Text>
                                     <Text style={secondaryLeftText}>Dining</Text>
                                 </View>
                                 <View style={rightContainer}>

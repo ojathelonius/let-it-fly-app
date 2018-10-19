@@ -59,7 +59,7 @@ class LetItFlySwiper extends React.Component {
                         resizeMode='cover'>
                         <View style={columnContainer}>
                             <View>
-                                <Text style={mainText}>Overbooked flight ?</Text>
+                                <Text style={mainText}>Overbooked flight?</Text>
                                 <Text style={secondaryText}>We're here to help</Text>
                             </View>
                         </View>

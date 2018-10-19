@@ -25,9 +25,9 @@ class LegsSwiper extends React.Component {
         }
 
         const textStyle = {
-            color: 'black',
             fontSize: 15,
-            padding: 10
+            padding: 10,
+            color: '#5E5E5E'
         }
 
         const hasLayover = flight.legs.length > 1;
@@ -39,7 +39,7 @@ class LegsSwiper extends React.Component {
 
                 <TouchableWithoutFeedback onPress={() => alert('Flight booked successfully.')}>
                     <View style={buttonStyle}>
-                        <Text style={textStyle}>Book it</Text>
+                        <Text style={textStyle}>Select this flight</Text>
                     </View>
                 </TouchableWithoutFeedback>
             </View>
