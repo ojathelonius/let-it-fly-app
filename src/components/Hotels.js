@@ -1,5 +1,7 @@
 import React from 'react';
-import { ImageBackground, View, Content } from 'react-native';
+import { ImageBackground, View, Content, ScrollView } from 'react-native';
+import HotelCard from './HotelCard';
+import hotels from '../../data/hotels';
 
 class Hotels extends React.Component {
 
@@ -14,11 +16,19 @@ class Hotels extends React.Component {
             elevation: 0
         };
 
+        const scrollStyle = {
+            flex: 1,
+            paddingBottom: 20
+        }
+
         return (
             <View style={containerStyle}>
                 <ImageBackground
                     source={require("../../assets/background.jpg")}
                     style={backgroundStyle}>
+                    <ScrollView style={scrollStyle}>
+                        {hotels.map(hotel => (<HotelCard hotel={hotel} key={hotel.id} />))}
+                    </ScrollView>
                 </ImageBackground>
             </View>
         );

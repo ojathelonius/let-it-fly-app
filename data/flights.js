@@ -31,7 +31,7 @@ const flights = [
                 destinationCity: 'Abu Dhabi',
                 destinationAirport: 'Abu Dhabi Int. Airport',
                 departure: 'Sat, Oct 27th 2018',
-                arrival: 'Sun, Oct 28th 2018',
+                arrival: 'Sat, Oct 27th 2018',
                 departureTime: '12:35',
                 arrivalTime: '7:50'
             },
