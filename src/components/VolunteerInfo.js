@@ -23,9 +23,18 @@ class VolunteerInfo extends React.Component {
             paddingRight: 200
         }
 
+        const tapHereStyle = {
+            fontSize: 15,
+            color: 'white',
+            textAlign: 'center',
+            fontWeight: 'bold',
+            marginTop: 5
+        }
+
         return (
             <View style={containerStyle}>
-                <Text style={infoStyle}>Thank you for volunteering to take the next flight. You can now make bookings !</Text>
+                <Text style={infoStyle}>Thank you for volunteering your seat.</Text>
+                <Text style={tapHereStyle}>Tap here to start booking !</Text>
             </View >
         );
     }

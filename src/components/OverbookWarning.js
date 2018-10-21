@@ -8,13 +8,21 @@ class OverbookWarning extends React.Component {
 
         const containerStyle = {
             padding: 10,
-            backgroundColor: '#DAA520'
+            backgroundColor: '#568CA8'
         }
 
         const warningStyle = {
             fontSize: 15,
             color: 'white',
             textAlign: 'center'
+        }
+
+        const tapHereStyle = {
+            fontSize: 15,
+            color: 'white',
+            textAlign: 'center',
+            fontWeight: 'bold',
+            marginTop: 5
         }
 
         const iconStyle = {
@@ -25,7 +33,8 @@ class OverbookWarning extends React.Component {
 
         return (
             <View style={containerStyle}>
-                <Text style={warningStyle}>Your flight SQ336 towards Singapore is overbooked. Would you like to take the next flight and enjoy free amenities on us ?</Text>
+                <Text style={warningStyle}>Your flight SQ336 to Singapore might be overbooked.</Text>
+                <Text style={tapHereStyle}>Tap here to see the perks of volunteering your seat !</Text>
             </View >
         );
     }
