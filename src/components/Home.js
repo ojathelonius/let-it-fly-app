@@ -30,9 +30,9 @@ class Home extends React.Component {
         return (
             <View style={containerStyle}>
                 {this.props.isOverbooked ? (
-                    <OverbookWarning />) : null}
+                    <OverbookWarning navigation={this.props.navigation}/>) : null}
                 {this.props.canBook ? (
-                    <VolunteerInfo />) : null}
+                    <VolunteerInfo navigation={this.props.navigation}/>) : null}
                 <ImageBackground
                     source={require("../../assets/background.jpg")}
                     style={backgroundStyle}>

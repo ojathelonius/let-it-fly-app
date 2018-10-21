@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableWithoutFeedback } from 'react-native';
 import { Icon } from 'native-base';
 
 class VolunteerInfo extends React.Component {
@@ -32,10 +32,12 @@ class VolunteerInfo extends React.Component {
         }
 
         return (
-            <View style={containerStyle}>
-                <Text style={infoStyle}>Thank you for volunteering your seat.</Text>
-                <Text style={tapHereStyle}>Tap here to start booking !</Text>
-            </View >
+            <TouchableWithoutFeedback onPress={() => this.props.navigation.navigate('LetItFly')}>
+                <View style={containerStyle}>
+                    <Text style={infoStyle}>Thank you for volunteering your seat.</Text>
+                    <Text style={tapHereStyle}>Tap here to start booking !</Text>
+                </View >
+            </TouchableWithoutFeedback>
         );
     }
 }

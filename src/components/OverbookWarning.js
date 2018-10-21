@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableWithoutFeedback } from 'react-native';
 import { Icon } from 'native-base';
 
 class OverbookWarning extends React.Component {
@@ -32,10 +32,12 @@ class OverbookWarning extends React.Component {
         }
 
         return (
-            <View style={containerStyle}>
-                <Text style={warningStyle}>Your flight SQ336 to Singapore might be overbooked.</Text>
-                <Text style={tapHereStyle}>Tap here to see the perks of volunteering your seat !</Text>
-            </View >
+            <TouchableWithoutFeedback onPress={() => this.props.navigation.navigate('LetItFly')}>
+                <View style={containerStyle}>
+                    <Text style={warningStyle}>Your flight SQ336 to Singapore might be overbooked.</Text>
+                    <Text style={tapHereStyle}>Tap here to see the perks of volunteering your seat !</Text>
+                </View >
+            </TouchableWithoutFeedback>
         );
     }
 }
