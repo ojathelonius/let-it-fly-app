@@ -1,5 +1,5 @@
 import React from 'react';
-import { ImageBackground, View, Image } from 'react-native';
+import { ImageBackground, View, Image, TouchableWithoutFeedback } from 'react-native';
 import { Content, List, ListItem, Text, Title } from 'native-base';
 import LetItFlySwiper from './LetItFlySwiper';
 
@@ -57,10 +57,29 @@ class LetItFly extends React.Component {
         }
 
         const largeTextDescriptionStyle = {
-            fontSize: 20,
+            fontSize: 16,
             textAlign: 'center',
             marginTop: 20,
-            color: '#908B6E'
+            color: '#908B6E',
+            marginBottom: 20
+        }
+
+        const buttonStyle = {
+            flexDirection: 'row',
+            backgroundColor: '#998B6E',
+            justifyContent: 'center',
+            alignItems: 'center',
+            borderRadius: 5
+        }
+
+        const textStyle = {
+            fontSize: 16,
+            padding: 6,
+            color: 'white'
+        }
+
+        const touchableStyle = {
+            marginTop: 10
         }
         return (
             <View style={containerStyle}>
@@ -99,7 +118,12 @@ class LetItFly extends React.Component {
                         </List>
                     </Content>
                     <View style={descriptionStyle}>
-                        <Text style={largeTextDescriptionStyle}>It's all on us!</Text>
+                        <Text style={largeTextDescriptionStyle}>It's all on us, should you decide to volunteer !</Text>
+                        <TouchableWithoutFeedback style={touchableStyle} onPress={() => alert('Thank you for volunteering !')}>
+                            <View style={buttonStyle}>
+                                <Text style={textStyle}>Volunteer my seat</Text>
+                            </View>
+                        </TouchableWithoutFeedback>
                     </View>
                 </ImageBackground>
 

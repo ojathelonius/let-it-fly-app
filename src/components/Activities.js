@@ -139,7 +139,10 @@ class Activities extends React.Component {
                                 </TouchableWithoutFeedback>
                                 {this.props.canBook ?
                                     (
-                                        <TouchableWithoutFeedback onPress={() => alert('Booking successful')}>
+                                        <TouchableWithoutFeedback onPress={() => {
+                                            this.props.hideActivityModal();
+                                            alert('Booking successful')
+                                            }}>
                                             <View style={buttonStyle}>
                                                 <Text style={textStyle}>Book</Text>
                                             </View>
