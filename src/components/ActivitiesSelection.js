@@ -1,7 +1,7 @@
 import React from 'react';
 import { ImageBackground, View, Content, Text, Container, ScrollView, TouchableWithoutFeedback } from 'react-native';
 import HomeSwiper from './HomeSwiper';
-import ActivityCard from './ActivityCard';
+import ActivityCardContainer from '../containers/ActivityCardContainer';
 
 class HomeFlightSelection extends React.Component {
 
@@ -40,7 +40,7 @@ class HomeFlightSelection extends React.Component {
                     <Text style={normalTextStyle}>{activityType.title}</Text>
                 </View>
                 <ScrollView horizontal={true} style={scrollStyle} showsHorizontalScrollIndicator={false}>
-                    {activityType.activities.map(activity => (<ActivityCard activity={activity} key={activity.id} />))}
+                    {activityType.activities.map(activity => (<ActivityCardContainer activity={activity} key={activity.id} />))}
                 </ScrollView>
             </View >
         );

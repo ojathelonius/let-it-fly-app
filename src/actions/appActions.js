@@ -31,3 +31,15 @@ export const notifyOverbooking = () => {
         type: 'NOTIFY_OVERBOOKING'
     }
 }
+
+export const showActivityModal = () => {
+    return {
+        type: 'SHOW_ACTIVITY_MODAL'
+    }
+}
+
+export const hideActivityModal = () => {
+    return {
+        type: 'HIDE_ACTIVITY_MODAL'
+    }
+}

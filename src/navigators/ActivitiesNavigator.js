@@ -1,11 +1,11 @@
 import React from 'react';
 import { createStackNavigator } from 'react-navigation';
 import CustomLetItFlyHeader from '../components/CustomLetItFlyHeader';
-import Activities from '../components/Activities';
+import ActivitiesContainer from '../containers/ActivitiesContainer';
 
 const ActivitiesNavigator = createStackNavigator(
     {
-        Activities: Activities
+        Activities: ActivitiesContainer
     },
     {
         navigationOptions: ({ navigation }) => ({
