@@ -131,11 +131,14 @@ class HotelCard extends React.Component {
                         {hotel.nosmoking ? (<Icon type="MaterialIcons" name="smoke-free" style={iconStyle} />) : null}
                         {hotel.parking ? (<Icon type="MaterialCommunityIcons" name="parking" style={iconStyle} />) : null}
                     </View>
-                    <TouchableWithoutFeedback onPress={() => alert('Hotel booked successfully.')}>
-                        <View style={buttonStyle}>
-                            <Text style={textStyle}>More info</Text>
-                        </View>
-                    </TouchableWithoutFeedback>
+                    {this.props.canBook ?
+                        (
+                            <TouchableWithoutFeedback onPress={() => alert('Hotel booked successfully.')}>
+                                <View style={buttonStyle}>
+                                    <Text style={textStyle}>Book</Text>
+                                </View>
+                            </TouchableWithoutFeedback>
+                        ) : null}
                 </View>
             </View>
         );

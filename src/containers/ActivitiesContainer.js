@@ -3,7 +3,8 @@ import Activities from '../components/Activities';
 import { hideActivityModal } from '../actions/appActions';
 
 const mapStateToProps = (state, ownProps) => ({
-    showActivityModal : state.appReducer.showActivityModal
+    showActivityModal : state.appReducer.showActivityModal,
+    canBook: state.appReducer.canBook
 });
 
 const mapDispatchToProps = (dispatch) => ({

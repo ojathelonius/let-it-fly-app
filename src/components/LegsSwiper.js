@@ -9,9 +9,15 @@ class LegsSwiper extends React.Component {
 
         const flight = this.props.flight;
 
-        const swiperStyle = {
-            height: 232
-        }
+        const swiperStyle = this.props.canBook ?
+            {
+                height: 232
+            } :
+            {
+                height: 234,
+                borderBottomWidth: 1,
+                borderBottomColor: '#BDBDBD',
+            }
 
         const buttonStyle = {
             flexDirection: 'row',
@@ -34,14 +40,18 @@ class LegsSwiper extends React.Component {
         return (
             <View>
                 <Swiper showsPagination={false} loop={false} style={swiperStyle}>
-                    {flight.legs.map((leg) => (<FlightCard flight={leg} key={leg.id} hasLayover={hasLayover}/>))}
+                    {flight.legs.map((leg) => (<FlightCard flight={leg} key={leg.id} hasLayover={hasLayover} />))}
                 </Swiper>
 
-                <TouchableWithoutFeedback onPress={() => alert('Flight booked successfully.')}>
-                    <View style={buttonStyle}>
-                        <Text style={textStyle}>Select this flight</Text>
-                    </View>
-                </TouchableWithoutFeedback>
+
+                {this.props.canBook ? (
+                    <TouchableWithoutFeedback onPress={() => alert('Flight booked successfully.')}>
+                        <View style={buttonStyle}>
+                            <Text style={textStyle}>Select this flight</Text>
+                        </View>
+                    </TouchableWithoutFeedback>
+                ) : null}
+
             </View>
         );
     }

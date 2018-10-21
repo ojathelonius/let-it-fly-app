@@ -2,7 +2,8 @@ const initialState = {
     isReady: false,
     showHeader: true,
     isOverbooked: false,
-    showActivityModal: false
+    showActivityModal: false,
+    canBook: false
 }
 
 const appReducer = (state = initialState, action) => {
@@ -15,7 +16,8 @@ const appReducer = (state = initialState, action) => {
         case 'NOTIFY_OVERBOOKING':
             return {
                 ...state,
-                isOverbooked: true
+                isOverbooked: true,
+                canBook: false
             }
         case 'SHOW_ACTIVITY_MODAL':
             return {
@@ -26,6 +28,12 @@ const appReducer = (state = initialState, action) => {
             return {
                 ...state,
                 showActivityModal: false
+            }
+        case 'NOTIFY_IS_VOLUNTEER':
+            return {
+                ...state,
+                canBook: true,
+                isOverbooked: false
             }
         default:
             return state

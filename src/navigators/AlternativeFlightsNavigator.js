@@ -1,11 +1,11 @@
 import React from 'react';
 import { createStackNavigator } from 'react-navigation';
 import CustomLetItFlyHeader from '../components/CustomLetItFlyHeader';
-import AlternativeFlights from '../components/AlternativeFlights';
+import AlternativeFlightsContainer from '../containers/AlternativeFlightsContainer';
 
 const AlternativeFlightsNavigator = createStackNavigator(
     {
-        AlternativeFlights: AlternativeFlights
+        AlternativeFlights: AlternativeFlightsContainer
     },
     {
         navigationOptions: ({ navigation }) => ({

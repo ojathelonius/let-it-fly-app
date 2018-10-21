@@ -4,6 +4,7 @@ import HomeHeader from './HomeHeader';
 import HomeSwiper from './HomeSwiper';
 import HomeFlightSelection from './HomeFlightSelection';
 import OverbookWarning from './OverbookWarning';
+import VolunteerInfo from './VolunteerInfo';
 
 class Home extends React.Component {
 
@@ -30,13 +31,15 @@ class Home extends React.Component {
             <View style={containerStyle}>
                 {this.props.isOverbooked ? (
                     <OverbookWarning />) : null}
+                {this.props.canBook ? (
+                    <VolunteerInfo />) : null}
                 <ImageBackground
                     source={require("../../assets/background.jpg")}
                     style={backgroundStyle}>
                     <HomeHeader />
                     <HomeSwiper />
                     <View style={touchableStyle}>
-                        <HomeFlightSelection notifyOverbooking={this.props.notifyOverbooking} />
+                        <HomeFlightSelection notifyOverbooking={this.props.notifyOverbooking} notifyIsVolunteer={this.props.notifyIsVolunteer} />
                     </View>
                 </ImageBackground>
             </View >

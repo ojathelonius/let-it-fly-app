@@ -43,3 +43,9 @@ export const hideActivityModal = () => {
         type: 'HIDE_ACTIVITY_MODAL'
     }
 }
+
+export const notifyIsVolunteer = () => {
+    return {
+        type: 'NOTIFY_IS_VOLUNTEER'
+    }
+}

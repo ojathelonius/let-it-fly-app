@@ -2,16 +2,16 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { Icon } from 'native-base';
 
-class OverbookWarning extends React.Component {
+class VolunteerInfo extends React.Component {
 
     render() {
 
         const containerStyle = {
             padding: 10,
-            backgroundColor: '#DAA520'
+            backgroundColor: '#568CA8'
         }
 
-        const warningStyle = {
+        const infoStyle = {
             fontSize: 15,
             color: 'white',
             textAlign: 'center'
@@ -25,10 +25,10 @@ class OverbookWarning extends React.Component {
 
         return (
             <View style={containerStyle}>
-                <Text style={warningStyle}>Your flight SQ336 towards Singapore is overbooked. Would you like to take the next flight and enjoy free amenities on us ?</Text>
+                <Text style={infoStyle}>Thank you for volunteering to take the next flight. You can now make bookings !</Text>
             </View >
         );
     }
 }
 
-export default OverbookWarning;
+export default VolunteerInfo;

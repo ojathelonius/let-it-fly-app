@@ -104,16 +104,18 @@ class HomeFlightSelection extends React.Component {
                         source={require("../../assets/images/jakarta.jpg")}
                         style={imgSlideStyle}
                         resizeMode='cover'>
-                        <View style={columnContainer}>
-                            <View style={normalContainer}>
-                                <Text style={mainText}>Jakarta</Text>
-                                <Text style={secondaryLeft}>Economy</Text>
+                        <TouchableWithoutFeedback style={touchableStyle} onPress={() => this.props.notifyIsVolunteer()}>
+                            <View style={columnContainer}>
+                                <View style={normalContainer}>
+                                    <Text style={mainText}>Jakarta</Text>
+                                    <Text style={secondaryLeft}>Economy</Text>
+                                </View>
+                                <View style={normalContainer}>
+                                    <Text style={secondaryLeft}>From</Text>
+                                    <Text style={mainText}>EUR 499*</Text>
+                                </View>
                             </View>
-                            <View style={normalContainer}>
-                                <Text style={secondaryLeft}>From</Text>
-                                <Text style={mainText}>EUR 499*</Text>
-                            </View>
-                        </View>
+                        </TouchableWithoutFeedback>
                     </ImageBackground>
                     <ImageBackground
                         source={require("../../assets/images/singapore.jpg")}

@@ -25,7 +25,7 @@ class AlternativeFlights extends React.Component {
                     source={require("../../assets/background.jpg")}
                     style={backgroundStyle}>
                     <ScrollView style={scrollStyle}>
-                        {flights.map(flight => (<LegsSwiper flight={flight} key={flight.id}/>))}
+                        {flights.map(flight => (<LegsSwiper flight={flight} key={flight.id} canBook={this.props.canBook}/>))}
                     </ScrollView>
                 </ImageBackground>
             </View>

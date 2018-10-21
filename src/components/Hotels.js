@@ -27,7 +27,7 @@ class Hotels extends React.Component {
                     source={require("../../assets/background.jpg")}
                     style={backgroundStyle}>
                     <ScrollView style={scrollStyle}>
-                        {hotels.map(hotel => (<HotelCard hotel={hotel} key={hotel.id} />))}
+                        {hotels.map(hotel => (<HotelCard hotel={hotel} key={hotel.id} canBook={this.props.canBook}/>))}
                     </ScrollView>
                 </ImageBackground>
             </View>
