@@ -118,12 +118,18 @@ class LetItFly extends React.Component {
                         </List>
                     </Content>
                     <View style={descriptionStyle}>
-                        <Text style={largeTextDescriptionStyle}>It's all on us, should you decide to volunteer !</Text>
-                        <TouchableWithoutFeedback style={touchableStyle} onPress={() => alert('Thank you for volunteering !')}>
-                            <View style={buttonStyle}>
-                                <Text style={textStyle}>Volunteer my seat</Text>
-                            </View>
-                        </TouchableWithoutFeedback>
+                        {!this.props.canBook ?
+                            (<View><Text style={largeTextDescriptionStyle}>It's all on us, should you decide to volunteer !</Text>
+                                <TouchableWithoutFeedback style={touchableStyle} onPress={() => alert('Thank you for volunteering !')}>
+                                    <View style={buttonStyle}>
+                                        <Text style={textStyle}>Volunteer my seat</Text>
+                                    </View>
+                                </TouchableWithoutFeedback>
+                            </View>)
+                            :
+                            (<Text style={largeTextDescriptionStyle}>Thank you for volunteering your seat ! You can now make bookings.</Text>)
+                        }
+
                     </View>
                 </ImageBackground>
 
