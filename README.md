@@ -11,7 +11,7 @@ The **code used for the initial submission** is available on two repositories, f
 ## Showcase
 
 ### Screenshots
-![Showcase](https://i.imgur.com/zOvQHp4.jpg)
+![Showcase](https://i.imgur.com/4UJmeKJ.jpg)
 
 ### Demo video
 The demo video that was shown during the finals is available [on YouTube](https://youtu.be/rh8bgbEPJvI).
