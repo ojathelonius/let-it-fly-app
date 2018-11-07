@@ -1,5 +1,7 @@
 # Let It Fly
 
+For more details, please see **[my blog post](https://blog.johanet.fr/singapore-airlines-appchallenge-2018/)**.
+
 This project is one of the six projects that have been selected amongst over 680 teams to be showcased during the finals in Singapore, during the [Singapore Airlines AppChallenge 2018](https://appchallenge.singaporeair.com/en/challenges/appchallenge-2018).
 
 This repo contains the **code of the final application** that was showcased in the finals in Singapore. It is a React Native proof of concept that integrates all of "Let it fly" features into the official Singapore Airlines application.
